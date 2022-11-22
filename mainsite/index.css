@@ -36,6 +36,15 @@ body{
     background : lavender;
 }
 
+.menu{
+    background-color: #febdb3;
+    margin: 0 0 0 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+
 /* navigation bar */
 
 .navbar{
@@ -118,3 +127,7 @@ body{
 #footer{
     margin-left:35%;
 }
+
+
+
+
