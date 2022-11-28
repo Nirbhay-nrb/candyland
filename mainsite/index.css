@@ -456,3 +456,81 @@ body {
     vertical-align: middle;
     margin: auto;
 }
+
+
+/* payment section */
+
+#payment-page {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 310px;
+    background: white;
+    background-color: #fdd5e4;
+}
+
+#payment-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: indianred;
+}
+
+#item-payment,
+#item-count,
+#delivery-charge,
+#total-payment {
+    font-size: 25px;
+    color: rgb(255, 83, 83);
+}
+
+.your-address{
+    border: 1px solid indianred;
+    color: indianred;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+#payment-option{
+    border: 1px solid indianred;
+    color: indianred;
+    background-color: #fdd5e4;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.payment-toggle{
+    display: none;
+}
+
+.payment-choose-title{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.cart-btn-lg {
+    outline: none;
+    border: none;
+    width : 100px;
+    height: 50px;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin-top : 50px;
+    cursor: pointer;
+}
