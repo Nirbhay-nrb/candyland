@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+
 <body>
   <div class="box">
     <!-- Nav Bar -->
@@ -155,25 +156,25 @@
               <p id="category-name">South Indian</p>
             </div>
           </div>
-          
+
           <!-- cart items -->
           <div id="cart-page" class="cart-toggle">
-          <p id="cart-title">Cart Items</p>
-          <table>
-            <thead>
-              <td>Item</td>
-              <td>Name</td>
-              <td>Quantity</td>
-              <td>Price</td>
-            </thead>
-            <tbody id="table-body">
-    
-            </tbody>
-          </table>
-          <div id="btn-box">
-            <button class="cart-btn" onclick="cartToggle()">Go to Menu</button>
+            <p id="cart-title">Cart Items</p>
+            <table>
+              <thead>
+                <td>Item</td>
+                <td>Name</td>
+                <td>Quantity</td>
+                <td>Price</td>
+              </thead>
+              <tbody id="table-body">
+
+              </tbody>
+            </table>
+            <div id="btn-box">
+              <button class="cart-btn" id="go-to-menu-button">Go to Menu</button>
+            </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -185,13 +186,41 @@
 
           <!-- cart total -->
           <div id="checkout" class="cart-toggle">
-          <p id="total-item">Total Item : 5</p>
-          <p id="total-price"></p>
-          <p id="delievery">Free delievery on $ 40</p>
-          <button class="cart-btn">Checkout</button>
-        </div>
+            <p id="total-item">Total Item : 5</p>
+            <p id="total-price"></p>
+            <p id="delievery">Free delivery on $ 40</p>
+            <button class="cart-btn" id="checkout-btn">Checkout</button>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Payment portal -->
+  <section id="payment">
+      <div id="payment-page" class="payment-toggle">
+        <p id="payment-title">Confirm Your Payment</p>
+        <div class="payment-info" style="float:left; width:20%;">
+          <p id="item-count">Items : 5</p>
+          <p id="item-payment">Amount : 5</p>
+          <p id="delivery-charge">Delivery Charges : 0</p>
+          <p id="total-payment">Total payment</p>
+        </div>
+        <div class="add-box" style="float:right; width:50%;">
+          <div style="float: left; width: 50%;">
+            <p class="payment-choose-title">Choose Address:</p>
+          <i class="fa fa-map-marker your-address" id="add-address"> Your Address</i><br>
+          </div>
+          <div style="float: left; width: 50%;">
+          <p class="payment-choose-title">Choose payment option:</p>
+          <select name="payment-option" id="payment-option"><br>
+            <option value="COD">COD</option>
+            <option value="Internet Banking">Internet Banking</option>
+            <option value="UPI">UPI</option>
+            <option value="Wallet">Wallet</option>
+          </select><br></div>
+          <button class="cart-btn-lg" id="Pay">Pay</button>
+        </div>
     </div>
   </section>
 
@@ -214,4 +243,4 @@
 </body>
 
 
-</html> 
+</html>
