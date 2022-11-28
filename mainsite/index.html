@@ -26,6 +26,7 @@
 </head>
 
 <body>
+  <div class="box">
     <!-- Nav Bar -->
     <section class="nav-bar-bg" id="title">
       <div class="container-fluid">
@@ -39,13 +40,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ms-auto">
               <li class="navbar-nav">
-                <a class="nav-link" href="#Login">Menu</a>
+                <a class="nav-link" href="#Menu">Menu</a>
               </li>
               <li class="navbar-nav">
                 <a class="nav-link" href="#Profile">Profile</a>
               </li>
               <li class="navbar-nav">
-                <a class="nav-link" href="#Cart">Cart</a>
+                <a id="cart-plus" class="nav-link" style="cursor: pointer;">Cart</a>
               </li>
               <li class="navbar-nav">
                 <a class="nav-link" href="#Orders">Orders</a>
@@ -63,44 +64,45 @@
     </section>
 
     <!-- Carousel -->
+    <div class="remaining">
       <section class="colored-section">
         <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active container-fluid">
-              <div style="float: left;width: 40%;">
+              <div class="carousel-image">
                 <img class="testimonial-image" src="images/hand2.png" alt="hand2">
               </div>
-              <div style="float: left; width:60%;">
-                <em style="font-size : 50px;">Pebbles, New York</em><br>
-                <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
-                <em style="font-size : 20px;">Rs.120</em>
-              </div>
-            </div>
-            <div class="carousel-item container-fluid ">
-              <div style="float: left;width: 40%;">
-                <img class="testimonial-image" src="images/hand2.png" alt="hand2">
-              </div>
-              <div style="float: left; width:60%;">
+              <div class="carousel-text">
                 <em style="font-size : 50px;">Pebbles, New York</em><br>
                 <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
                 <em style="font-size : 20px;">Rs.120</em>
               </div>
             </div>
             <div class="carousel-item container-fluid">
-              <div style="float: left;width: 40%;">
+              <div class="carousel-image">
                 <img class="testimonial-image" src="images/hand2.png" alt="hand2">
               </div>
-              <div style="float: left; width:60%;">
+              <div class="carousel-text">
                 <em style="font-size : 50px;">Pebbles, New York</em><br>
                 <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
                 <em style="font-size : 20px;">Rs.120</em>
               </div>
             </div>
             <div class="carousel-item container-fluid">
-              <div style="float: left;width: 40%;">
+              <div class="carousel-image">
                 <img class="testimonial-image" src="images/hand2.png" alt="hand2">
               </div>
-              <div style="float: left; width:60%;">
+              <div class="carousel-text">
+                <em style="font-size : 50px;">Pebbles, New York</em><br>
+                <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
+                <em style="font-size : 20px;">Rs.120</em>
+              </div>
+            </div>
+            <div class="carousel-item container-fluid">
+              <div class="carousel-image">
+                <img class="testimonial-image" src="images/hand2.png" alt="hand2">
+              </div>
+              <div class="carousel-text">
                 <em style="font-size : 50px;">Pebbles, New York</em><br>
                 <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
                 <em style="font-size : 20px;">Rs.120</em>
@@ -115,84 +117,93 @@
           </a>
         </div>
       </section>
-
-  <!-- Main menu -->
-  <section>
-  <div class="container" id="container">
-    <div id="food-container">
-      <div id="food-items" class="d-food-items">
-        <div id="biryani" class="d-biryani">
-          <p id="category-name">Biryani</p>
-        </div>
-  
-        <div id="chicken" class="d-chicken">
-          <p id="category-name">Chicken Delicious</p>
-        </div>
-  
-        <div id="paneer" class="d-paneer">
-          <p id="category-name">Paneer Mania</p>
-        </div>
-  
-        <div id="vegetable" class="d-vegetable">
-          <p id="category-name">Pure Veg Dishes</p>
-        </div>
-  
-        <div id="chinese" class="d-chinese">
-          <p id="category-name">Chinese Corner</p>
-        </div>
-  
-        <div id="south-indian" class="d-south-indian">
-          <p id="category-name">South Indian</p>
-        </div>
-      </div>
-  
-      <!-- <div id="cart-page" class="cart-toggle">
-        <p id="cart-title">Cart Items</p>
-        <p id="m-total-amount">Total Amout : 100</p>
-        <table>
-          <thead>
-            <td>Item</td>
-            <td>Name</td>
-            <td>Quantity</td>
-            <td>Price</td>
-          </thead>
-          <tbody id="table-body">
-  
-          </tbody>
-        </table>
-        <div class="btn-box">
-          <button class="cart-btn">Checkout</button>
-        </div>
-      </div> -->
-    </div>
-  
-    <div id="cart">
-      <div id="category-list">
-        <p class="item-menu">Go For Hunt</p>
-        <div class="border"></div>
-      </div>
-      <!-- <div id="checkout" class="cart-toggle">
-        <p id="total-item">Total Item : 5</p>
-        <p id="total-price"></p>
-        <p id="delievery">Free delievery on $ 40</p>
-        <button class="cart-btn">Checkout</button>
-      </div> -->
     </div>
   </div>
-</section>
 
-  <!-- Footer -->
-  <footer id="footer">
-    <div class="footer-container-fluid">
-      <div>
-        <i class="social-icons fab fa-facebook-f"></i>
-        <i class="social-icons fab fa-twitter"></i>
-        <i class="social-icons fab fa-instagram"></i>
-        <i class="social-icons fas fa-envelope"></i>
-        <p>© Copyright 2022 CandyLand</p>
+  <!-- Main menu -->
+  <section id="Menu">
+    <div class="grid-container" id="container">
+      <div class="grid-item">
+        <div id="food-container">
+          <div id="food-items" class="d-food-items">
+            <div id="biryani" class="d-biryani">
+              <p id="category-name">Biryani</p>
+            </div>
+
+            <div id="chicken" class="d-chicken">
+              <p id="category-name">Chicken Delicious</p>
+            </div>
+
+            <div id="paneer" class="d-paneer">
+              <p id="category-name">Paneer Mania</p>
+            </div>
+
+            <div id="vegetable" class="d-vegetable">
+              <p id="category-name">Pure Veg Dishes</p>
+            </div>
+
+            <div id="chinese" class="d-chinese">
+              <p id="category-name">Chinese Corner</p>
+            </div>
+
+            <div id="south-indian" class="d-south-indian">
+              <p id="category-name">South Indian</p>
+            </div>
+          </div>
+          
+          <!-- cart items -->
+          <div id="cart-page" class="cart-toggle">
+          <p id="cart-title">Cart Items</p>
+          <table>
+            <thead>
+              <td>Item</td>
+              <td>Name</td>
+              <td>Quantity</td>
+              <td>Price</td>
+            </thead>
+            <tbody id="table-body">
+    
+            </tbody>
+          </table>
+          <div id="btn-box">
+            <button class="cart-btn" onclick="cartToggle()">Go to Menu</button>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div id="cart">
+          <div id="category-list" style="padding-left: 20px;">
+            <p class="item-menu">Go To</p>
+          </div>
+
+          <!-- cart total -->
+          <div id="checkout" class="cart-toggle">
+          <p id="total-item">Total Item : 5</p>
+          <p id="total-price"></p>
+          <p id="delievery">Free delievery on $ 40</p>
+          <button class="cart-btn">Checkout</button>
+        </div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- Footer -->
+  <section id="About">
+    <footer id="footer">
+      <div class="footer-container-fluid">
+        <div>
+          <i class="social-icons fab fa-facebook-f"></i>
+          <i class="social-icons fab fa-twitter"></i>
+          <i class="social-icons fab fa-instagram"></i>
+          <i class="social-icons fas fa-envelope"></i>
+          <p>© Copyright 2022 CandyLand</p>
+        </div>
+      </div>
+    </footer>
+  </section>
   <script src="./index.js" type="module"></script>
 </body>
 

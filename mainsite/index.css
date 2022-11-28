@@ -13,13 +13,25 @@ body {
     height: 100%;
 }
 
-.container {
-    display: grid;
-    width: 100%;
+.grid-container {
+    display: inline-grid;
+    column-gap: 0;
+    width: 100vw;
     grid-template-columns: 80% 20%;
+    height: 100%;
     /* min-height: 100vh;
     min-height: -webkit-fill-available; */
     /* overflow: hidden; */
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.remaining {
+    flex-grow: 1;
 }
 
 
@@ -40,24 +52,31 @@ body {
     height: 100%;
 }
 
-#food-items{
+#food-items {
     background: #eca69d;
     overflow: auto;
     height: calc(100vh - 86px);
 }
 
-#biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian{
-    margin-top: 40px; 
+#biryani,
+#paneer,
+#chicken,
+#vegetable,
+#chinese,
+#south-indian {
+    margin-top: 40px;
 }
 
-#category-name,.item-menu{
+#category-name,
+.item-menu {
     margin: 10px;
-    font-size: 35px;   
+    font-size: 35px;
     color: white;
     font-family: 'Aclonica', sans-serif;
 }
+
 #cart {
-    background: lavender;
+    background: black;
 }
 
 .menu {
@@ -67,20 +86,25 @@ body {
     padding: 0;
 }
 
-/* can be deleted from here */
-#paneer #item-card,#vegetable #item-card{
+#paneer #item-card,
+#vegetable #item-card {
     background: rgb(218, 253, 188);
 }
-#chinese #item-card,#south-indian #item-card{
+
+#chinese #item-card,
+#south-indian #item-card {
     background: rgb(221, 243, 243);
 }
-#category-name,.item-menu{
+
+#category-name,
+.item-menu {
     margin: 10px;
-    font-size: 35px;   
+    font-size: 35px;
     color: white;
     font-family: 'Aclonica', sans-serif;
 }
-#item-card{
+
+#item-card {
     width: 180px;
     height: 220px;
     padding: 10px;
@@ -91,32 +115,40 @@ body {
     cursor: pointer;
     transition: 0.5s all step-end;
 }
-#item-card:hover img{
+
+#item-card:hover img {
     transform: scale(1.2);
 }
-#card-top{
+
+#card-top {
     display: flex;
     margin: 5px 0;
     justify-content: space-between;
 }
-#rating{
+
+#rating {
     padding: 7px;
     color: goldenrod;
     background: black;
     font-size: 14px;
     border-radius: 15px;
 }
-.fa-heart-o{
+
+.fa-heart-o {
     padding: 6px;
     border-radius: 50%;
     background: white;
     cursor: pointer;
 }
-.toggle-heart{
-background: orangered;
-color: white; 
+
+.toggle-heart {
+    background: orangered;
+    color: white;
 }
-#item-card img{
+
+
+
+#item-card img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -125,51 +157,58 @@ color: white;
     margin-bottom: 15px;
     transition: 0.5s all ease-in-out;
 }
-#item-name{
+
+#item-name {
     margin: 5px 0;
     font-weight: 600;
     color: darkslategray;
     font-size: 18px;
 }
-#item-price{
+
+#item-price {
     margin: 0;
     color: rgb(2, 27, 27);
     font-weight: 500;
     font-size: 18px;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
-.food-items{
+
+.food-items {
     display: none;
 }
-.cart-toggle{
+
+.cart-toggle {
     display: none;
 }
-#cart-page{
+
+#cart-page {
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 100%;
     background: white;
-    margin: 40px 10px;
-    margin-right: 50px;
-    padding: 20px 30px;
-    padding-bottom: 30px;
-    position: relative;
 }
-#cart-title{
+
+#cart-title {
     font-size: 35px;
     margin: 0;
     color: indianred;
 }
-#cart-page table{
+
+#cart-page table {
     width: 100%;
     margin-top: 20px;
     text-align: center;
 }
-#cart-page table thead td{
+
+#cart-page table thead td {
     font-size: 25px;
     padding-bottom: 10px;
 }
 
-.cart-btn{
+.cart-btn {
     outline: none;
     border: none;
     background: crimson;
@@ -182,11 +221,13 @@ color: white;
     margin: 15px 0;
     cursor: pointer;
 }
-#cart-page table tbody td{
+
+#cart-page table tbody td {
     padding: 10px 0;
     font-size: 20px;
 }
-#cart-page table tbody button{
+
+.increase-item{
     outline: none;
     border: none;
     font-size: 16px;
@@ -197,45 +238,67 @@ color: white;
     cursor: pointer;
     margin: 0 5px;
 }
-#cart-page table tbody img{
+
+.decrease-item{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    background: lightcoral;
+    color: white;
+    padding-left: 1px;
+    padding-right: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#cart-page table tbody img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
 }
-#checkout{
+
+#checkout {
     text-align: center;
     margin: 40px auto;
     border-radius: 5px;
     background: white;
     padding: 10px 20px;
 }
-#checkout p{
+
+#checkout p {
     margin: 15px 0;
     float: left;
 }
-#total-price,#total-item{
+
+#total-price,
+#total-item {
     font-size: 25px;
     color: indianred;
 }
-#delievery{
+
+#delievery {
     font-size: 20px;
     color: limegreen;
 }
-#cart{
-    background: whitesmoke;
+
+#cart {
+    background: white;
     padding-right: 30px;
     overflow-y: scroll;
 }
 
-.item-menu{
+.item-menu {
     margin: 0;
     font-size: 30px;
     margin-top: 40px;
     color: indianred;
-    background: whitesmoke;
-    
+    background: white;
+
 }
-.list-card{
+
+.list-card {
     display: flex;
     align-items: center;
     margin-top: 15px;
@@ -243,25 +306,30 @@ color: white;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
 }
-.list-card:hover{
+
+.list-card:hover {
     background: rgb(255, 216, 222);
 }
-.list-card:hover img{
+
+.list-card:hover img {
     transition: 0.5s all ease-in-out;
     transform: scale(1.2);
 }
-.list-card img{
+
+.list-card img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
-.list-name{
+
+.list-name {
     font-size: 20px;
     margin: 0 10px;
     text-decoration: none;
     text-transform: capitalize;
     color: rgb(94, 43, 43);
 }
+
 /* to here */
 
 
@@ -296,7 +364,7 @@ color: white;
 
 .nav-bar-bg {
     color: #fff;
-    position: fixed;
+    /* position: fixed; */
 }
 
 /* title */
@@ -319,9 +387,10 @@ color: white;
 
 /* carousel */
 
-.carousel-control-prev{
+.carousel-control-prev {
     vertical-align: middle;
 }
+
 .testimonial-text {
     font-size: 3rem;
     line-height: 1.5;
@@ -331,13 +400,30 @@ color: white;
     width: 60%;
     border-radius: 100%;
     margin-left: 50px;
+    margin-top: 20px;
+    vertical-align: middle;
 }
 
-#testimonial-carousel{
-    height: 80%;
-    position :static;
+#testimonial-carousel {
+    height: 100%;
 }
 
+.carousel-item container-fluid {
+    margin-top: 50px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.carousel-text {
+    float: left;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.carousel-image{
+    float: left;
+    width: 40%;
+}
 
 
 /* footer-section */
@@ -359,13 +445,14 @@ color: white;
 }
 
 #footer {
-    /* margin-left: 35%; */
+    text-align: center;
     background-color: #f6d0e5;
 }
 
-.footer-container-fluid{
+.footer-container-fluid {
     align-items: center;
     height: 150px;
+    background-color: #f6d0e5;
     vertical-align: middle;
-    margin : auto;
+    margin: auto;
 }
