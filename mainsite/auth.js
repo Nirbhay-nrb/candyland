@@ -1,5 +1,3 @@
-// setting up firebase with our website
-
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyDwzJryreh4sj_RAM3lzpEJKAT1GtAbJdY",
   authDomain: "auth-form-af374.firebaseapp.com",
@@ -10,9 +8,8 @@ const firebaseApp = firebase.initializeApp({
   measurementId: "G-CKXCPMV18R",
 });
 
-const db = firebaseApp.firestore();
-const auth = firebaseApp.auth();
- 
+// const db = firebaseApp.firestore();
+// const auth = firebaseApp.auth();
 
 
 // Sign up function
@@ -27,17 +24,14 @@ const signUp = () => {
     .then((result) => {
       // Signed in
       console.log(result);
-      location.replace("index.html")
-
+      location.replace("index.html");
     })
-      // ...
-   
-      .catch((error) => {
-        document.getElementById("error").innerHTML = error.message
+    // ...
+
+    .catch((error) => {
+      document.getElementById("error").innerHTML = error.message;
     });
-}
-
-
+};
 
 // Sign In function
 const signIn = () => {
@@ -48,21 +42,16 @@ const signIn = () => {
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((result) => {
-    //   // Signed in
-    //   document.write("You are Signed In");
+      //   // Signed in
+      //   document.write("You are Signed In");
       console.log(result);
-      location.replace("index.html")
+      location.replace("index.html");
     })
-   
-    .catch((error) => {
-    //   console.log(error.code);
-    //   console.log(error.message);
-    document.getElementById("error").innerHTML = error.message
 
+
+    .catch((error) => {
+      //   console.log(error.code);
+      //   console.log(error.message);
+      document.getElementById("error").innerHTML = error.message;
     });
 };
-
-function logout(){
-  // firebase.auth().signOut()
-  location.replace("signin.html")
-}

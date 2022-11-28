@@ -413,7 +413,7 @@ function decrementItem(){
             document.getElementById('category-list').classList.toggle('food-items');
             // document.getElementById('m-cart-plus').classList.toggle('m-cart-toggle')
             document.getElementById('cart-page').classList.toggle('cart-toggle');
-            document.getElementById('category-header').classList.toggle('toggle-category');
+            // document.getElementById('category-header').classList.toggle('toggle-category');
             document.getElementById('checkout').classList.toggle('cart-toggle');
             flag= false;
             alert("Currently no item in cart!");

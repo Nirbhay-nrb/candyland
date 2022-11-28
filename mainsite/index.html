@@ -22,6 +22,10 @@
     crossorigin="anonymous"></script>
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/57730a48fe.js" crossorigin="anonymous"></script>
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -55,8 +59,8 @@
                 <a class="nav-link" href="#About">About</a>
               </li>
               <li class="navbar-nav">
-                <!-- <a class="nav-link" href="#Logout">Logout</a> -->
-                <button class="btn btn-lg" onclick="logout()">Logout</button>
+                <a class="nav-link" href="signin.html">Logout</a>
+                <!-- <button class="btn btn-lg" onclick="logout()">logout</button> -->
               </li>
             </ul>
           </div>
@@ -192,27 +196,6 @@
   </section>
 
   <!-- Footer -->
-<<<<<<< HEAD
-  <footer class="white-section" id="footer">
-    <div class="container-fluid">
-      <i class="social-icons fab fa-facebook-f"></i>
-      <i class="social-icons fab fa-twitter"></i>
-      <i class="social-icons fab fa-instagram"></i>
-      <i class="social-icons fas fa-envelope"></i>
-      <p>© Copyright 2022 CandyLand</p>
-    </div>
-  </footer>
-
-
-  <!-- signin/up -->
-  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
-
-    <!-- <script src="sign.js"></script> -->
-    <script src="index.js"></script>
-    <script src="auth.js"></script>
-=======
   <section id="About">
     <footer id="footer">
       <div class="footer-container-fluid">
@@ -227,7 +210,7 @@
     </footer>
   </section>
   <script src="./index.js" type="module"></script>
->>>>>>> 35e62adf0e0993d86bdde31be168fb90825c9d5b
+  <script src="./auth.js" type="module"></script>
 </body>
 
 
