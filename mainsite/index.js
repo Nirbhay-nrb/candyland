@@ -1,20 +1,20 @@
 import { foodItem } from './dessert.js'
 
 function displayItems() {
-    var biryani = document.getElementById('biryani');
-    var paneer = document.getElementById('paneer');;
-    var chicken = document.getElementById('chicken');
-    var vegetable = document.getElementById('vegetable');
-    var chinese = document.getElementById('chinese');
-    var southIndian = document.getElementById('south-indian');
+    var donut = document.getElementById('Donuts');
+    var icecream = document.getElementById('Icecream');;
+    var shakes = document.getElementById('Shakes');
+    var sweets = document.getElementById('Sweets');
+    var cakes = document.getElementById('Cake');
+ 
 
-    const biryaniData = foodItem.filter((item) => item.category == 'biryani');
-    const chickenData = foodItem.filter((item) => item.category == 'chicken');
-    const PaneerData = foodItem.filter((item) => item.category == 'paneer');
-    const vegetableData = foodItem.filter((item) => item.category == 'vegetable');
-    const chineseData = foodItem.filter((item) => item.category == 'chinese');
-    const southData = foodItem.filter((item) => item.category == 'south indian');
-    biryaniData.map(item => {
+    const donutData = foodItem.filter((item) => item.category == 'Donuts');
+    const icecreamData = foodItem.filter((item) => item.category == 'Icecream');
+    const shakesData = foodItem.filter((item) => item.category == 'Shakes');
+    const sweetsData = foodItem.filter((item) => item.category == 'Sweets');
+    const cakesData = foodItem.filter((item) => item.category == 'Cake');
+    
+    donutData.map(item => {
 
         var itemCard = document.createElement('div');
         itemCard.setAttribute('id', 'item-card')
@@ -51,12 +51,13 @@ function displayItems() {
         itemCard.appendChild(itemName);
         itemCard.appendChild(itemPrice);
 
-        biryani.appendChild(itemCard);
+        donut
+.appendChild(itemCard);
 
     })
 
 
-    chickenData.map(item => {
+    icecreamData.map(item => {
         var itemCard = document.createElement('div');
         itemCard.setAttribute('id', 'item-card')
 
@@ -92,11 +93,11 @@ function displayItems() {
         itemCard.appendChild(itemName);
         itemCard.appendChild(itemPrice);
 
-        chicken.appendChild(itemCard)
+        icecream.appendChild(itemCard)
 
     })
 
-    PaneerData.map(item => {
+    shakesData.map(item => {
         var itemCard = document.createElement('div');
         itemCard.setAttribute('id', 'item-card')
 
@@ -132,52 +133,11 @@ function displayItems() {
         itemCard.appendChild(itemName);
         itemCard.appendChild(itemPrice);
 
-        paneer.appendChild(itemCard)
+        shakes.appendChild(itemCard)
 
     })
 
-    vegetableData.map(item => {
-        var itemCard = document.createElement('div');
-        itemCard.setAttribute('id', 'item-card')
-
-        var cardTop = document.createElement('div');
-        cardTop.setAttribute('id', 'card-top');
-
-        var star = document.createElement('i');
-        star.setAttribute('class', 'fa fa-star');
-        star.setAttribute('id', 'rating');
-        star.innerText = ' ' + item.rating;
-
-        var heart = document.createElement('i');
-        heart.setAttribute('class', 'fa fa-heart-o add-to-cart');
-        heart.setAttribute('id', item.id)
-
-        cardTop.appendChild(star);
-        cardTop.appendChild(heart);
-
-
-        var img = document.createElement('img');
-        img.src = item.img;
-
-        var itemName = document.createElement('p');
-        itemName.setAttribute('id', 'item-name');
-        itemName.innerText = item.name;
-
-        var itemPrice = document.createElement('p');
-        itemPrice.setAttribute('id', 'item-price');
-        itemPrice.innerText = 'Price : $ ' + item.price;
-
-        itemCard.appendChild(cardTop);
-        itemCard.appendChild(img);
-        itemCard.appendChild(itemName);
-        itemCard.appendChild(itemPrice);
-
-
-        vegetable.appendChild(itemCard)
-
-    })
-
-    chineseData.map(item => {
+    sweetsData.map(item => {
         var itemCard = document.createElement('div');
         itemCard.setAttribute('id', 'item-card')
 
@@ -214,11 +174,11 @@ function displayItems() {
         itemCard.appendChild(itemPrice);
 
 
-        chinese.appendChild(itemCard)
+        sweets.appendChild(itemCard)
 
     })
 
-    southData.map(item => {
+    cakesData.map(item => {
         var itemCard = document.createElement('div');
         itemCard.setAttribute('id', 'item-card')
 
@@ -254,20 +214,22 @@ function displayItems() {
         itemCard.appendChild(itemName);
         itemCard.appendChild(itemPrice);
 
-        southIndian.appendChild(itemCard)
+
+        cakes.appendChild(itemCard)
 
     })
+
 }
 displayItems();
 
 
-const vegData = [...new Map(foodItem.map(item => [item['category'], item])).values()];
-console.log(vegData);
+const allData = [...new Map(foodItem.map(item => [item['category'], item])).values()];
+console.log(allData);
 
 function selectTaste() {
     var categoryList = document.getElementById('category-list');
 
-    vegData.map(item => {
+    allData.map(item => {
         console.log(item);
         var listCard = document.createElement('div');
         listCard.setAttribute('class', 'list-card');
@@ -490,18 +452,17 @@ function pay() {
         var tableBody = document.getElementById('table-body');
         tableBody.innerHTML = '';
         document.getElementById('cart-plus').innerText = 'Cart';
-        var biryani = document.getElementById('biryani');
-        biryani.innerHTML='<p id="category-name">Biryani</p>';
-        var paneer = document.getElementById('paneer');
-        paneer.innerHTML='<p id="category-name">Chicken Delicious</p>';
-        var chicken = document.getElementById('chicken');
-        chicken.innerHTML='<p id="category-name">Paneer Mania</p>';
-        var vegetable = document.getElementById('vegetable');
-        vegetable.innerHTML='<p id="category-name">Pure Veg Dishes</p>';
-        var chinese = document.getElementById('chinese');
-        chinese.innerHTML='<p id="category-name">Chinese Corner</p>';
-        var southIndian = document.getElementById('south-indian');
-        southIndian.innerHTML='<p id="category-name">South Indian</p>';
+        var donut= document.getElementById('Donuts');
+        donut.innerHTML='<p id="category-name">Donut</p>';
+        var shakes = document.getElementById('Shakes');
+        shakes.innerHTML='<p id="category-name">Shakes </p>';
+        var icecream = document.getElementById('Icecream');
+        icecream.innerHTML='<p id="category-name">Icecream</p>';
+        var sweets = document.getElementById('Sweets');
+        sweets.innerHTML='<p id="category-name">Sweets</p>';
+        var cakes = document.getElementById('Cake');
+        cakes.innerHTML='<p id="category-name">Cakes</p>';
+        
         displayItems();
         document.querySelectorAll('.add-to-cart').forEach(item => {
             item.addEventListener('click', addToCart)
