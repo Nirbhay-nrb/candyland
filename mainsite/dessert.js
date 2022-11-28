@@ -1,0 +1,58 @@
+const foodItem= [
+{
+    id : 1,
+    name : 'Donuts',
+    category : 'biryani',
+    rating : 4.3,
+    price : 15,
+    img : 'images/gumball.png',
+    quantity : 1,
+},
+{
+    id : 2,
+    name : 'Ice cream',
+    category : 'biryani',
+    rating : 4.3,
+    price : 15,
+    img : 'images/gumball.png',
+    quantity : 1,
+},
+{
+    id : 3,
+    name : 'Cupcakes',
+    category : 'biryani',
+    rating : 4.3,
+    price : 15,
+    img : 'images/gumball.png',
+    quantity : 1,
+},
+{
+    id : 4,
+    name : 'Rasgulla',
+    category : 'chicken',
+    rating : 4.3,
+    price : 15,
+    img : 'images/gumball.png',
+    quantity : 1,
+},
+{
+    id : 5,
+    name : 'Gulab jamun',
+    category : 'chicken',
+    rating : 4.3,
+    price : 15,
+    img : 'images/gumball.png',
+    quantity : 1,
+},
+{
+    id : 6,
+    name : 'candy',
+    category : 'paneer',
+    rating : 4.3,
+    price : 15,
+    img : 'images/gumball.png',
+    quantity : 1,
+},
+]
+
+export {foodItem};
