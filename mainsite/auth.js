@@ -8,10 +8,6 @@ const firebaseApp = firebase.initializeApp({
   measurementId: "G-CKXCPMV18R",
 });
 
-// const db = firebaseApp.firestore();
-// const auth = firebaseApp.auth();
-
-
 // Sign up function
 const signUp = () => {
   const email = document.getElementById("email").value;
@@ -42,16 +38,13 @@ const signIn = () => {
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((result) => {
-      //   // Signed in
-      //   document.write("You are Signed In");
+      //   Signed in
+
       console.log(result);
       location.replace("index.html");
     })
 
-
     .catch((error) => {
-      //   console.log(error.code);
-      //   console.log(error.message);
       document.getElementById("error").innerHTML = error.message;
     });
 };

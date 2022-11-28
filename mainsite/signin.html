@@ -9,65 +9,63 @@
     <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-
     <div class="container" id="container">
+      <!-- form portion -->
+      <form action="index.html">
+        <div class="form-container log-in-container">
+          <!-- Email  -->
+          <div class="email">
+            <label for="email"><p>Email</p></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Write your email"
+            />
+          </div>
+          <!-- passWord -->
+          <div class="pass">
+            <label for="password"><p>Password</p></label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="password"
+            />
+          </div>
 
-<!-- form portion -->
-<form action="index.html">
-      <div class="form-container log-in-container" >
-        <!-- Email  -->
-        <div class="email">
-          <label for="email"><p>Email</p></label>
-          <input
-            type="email"  
-            name="email"
-            id="email"
-            placeholder="Write your email"
-          />
+          <!-- Sign Up button -->
+          <br />
+          <button id="submit-btn" onclick="signIn()" id="loginForm">
+            Sign In
+          </button>
+
+          <!-- Sign In option -->
+          <br />
+          <span>
+            <br />
+            Dont have an account ?
+            <a href="signup.html">Sign Up</a></span
+          >
         </div>
-        <!-- passWord -->
-        <div class="pass">
-          <label for="password"><p>Password</p></label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="password"
-          />
-        </div>
-  
-        <!-- Sign Up button -->
-        <br>
-        <button id="submit-btn" onclick="signIn()" id="loginForm">Sign In</button>
-       
-        <!-- Sign In option -->
-        <br>
-        <span>
-          <br>
-        Dont have an account ?
-       <a href="signup.html">Sign Up</a></span>
-      </div>
-    </form>
+      </form>
 
       <!-- image portion -->
       <div class="overlay-container">
         <div class="overlay">
-        <div class="overlay-panel overlay-right">
-        <h1> CandyLand</h1>
-        <img class="image" src="images/homescreen.jpeg">
+          <div class="overlay-panel overlay-right">
+            <h1>CandyLand</h1>
+            <img class="image" src="images/homescreen.jpeg" />
+          </div>
         </div>
-        </div>
-        </div>
-
-
+      </div>
     </div>
-
-
-
-    
 
     <script src="auth.js" type="module"></script>
   </body>
