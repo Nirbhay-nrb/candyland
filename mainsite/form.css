@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #f4c5bb;
+	background: linear-gradient(to right, #ecb1ae, #aa3d7c);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -83,8 +83,8 @@ label {
 #submit-btn {
     
         border-radius: 20px;
-        border: 1px solid #e49486;
-        background-color: #97584c;
+        border: 1px solid #ac695e;
+        background-color: #e89c8d;
         color: #FFFFFF;
         font-size: 12px;
         font-weight: bold;
@@ -129,9 +129,9 @@ a:hover {
 }
 
 .overlay {
-	background: #d998a7;
-	background: -webkit-linear-gradient(to right, #924d41, #ef2c59);
-	background: linear-gradient(to right, #cb6250, #e499aa);
+	background: #f7c2c2;
+	background: -webkit-linear-gradient(to right, 541616, ef2c59);
+	background: linear-gradient(to right, #cd6767, #fb8989);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
