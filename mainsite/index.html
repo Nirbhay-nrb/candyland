@@ -1,204 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,viewport-fit=cover"
+    />
+    <title>CandyLand</title>
+    <!-- CSS Stylesheets -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/mainsite/index.css" />
+    <!-- bootstrap scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/57730a48fe.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
-  <title>CandyLand</title>
-  <!-- CSS Stylesheets -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="/mainsite/index.css">
-  <!-- bootstrap scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/57730a48fe.js" crossorigin="anonymous"></script>
-  <!-- firebase -->
-  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.8.4/firebase-auth-compat.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  <body>
+    <div class="box">
+      <!-- Nav Bar -->
+      <section class="nav-bar-bg" id="title">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <img
+              class="navbar-title-image"
+              src="images/gumball.png"
+              alt="hand2"
+            />
+            <a class="navbar-brand" href=" "> CandyLand</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav ms-auto">
+                <li class="navbar-nav">
+                  <a class="nav-link" href="#Menu">Menu</a>
+                </li>
+                <li class="navbar-nav">
+                  <a class="nav-link" href="#Profile">Profile</a>
+                </li>
+                <li class="navbar-nav">
+                  <a id="cart-plus" class="nav-link" style="cursor: pointer"
+                    >Cart</a
+                  >
+                </li>
+                <li class="navbar-nav">
+                  <a class="nav-link" href="#Orders">Orders</a>
+                </li>
+                <li class="navbar-nav">
+                  <a class="nav-link" href="#About">About</a>
+                </li>
+                <li class="navbar-nav">
+                  <a class="nav-link" href="signin.html">Logout</a>
+                  <!-- <button class="btn btn-lg" onclick="logout()">logout</button> -->
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </section>
 
-<body>
-  <div class="box">
-    <!-- Nav Bar -->
-    <section class="nav-bar-bg" id="title">
-      <div class="container-fluid">
-        <nav class="navbar  navbar-expand-lg navbar-dark">
-          <img class="navbar-title-image" src="images/gumball.png" alt="hand2">
-          <a class="navbar-brand" href=" "> CandyLand</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ms-auto">
-              <li class="navbar-nav">
-                <a class="nav-link" href="#Menu">Menu</a>
-              </li>
-              <li class="navbar-nav">
-                <a class="nav-link" href="#Profile">Profile</a>
-              </li>
-              <li class="navbar-nav">
-                <a id="cart-plus" class="nav-link" style="cursor: pointer;">Cart</a>
-              </li>
-              <li class="navbar-nav">
-                <a class="nav-link" href="#Orders">Orders</a>
-              </li>
-              <li class="navbar-nav">
-                <a class="nav-link" href="#About">About</a>
-              </li>
-              <li class="navbar-nav">
-                <a class="nav-link" href="signin.html">Logout</a>
-                <!-- <button class="btn btn-lg" onclick="logout()">logout</button> -->
-              </li>
-            </ul>
+      <!-- Carousel -->
+      <div class="remaining">
+        <section class="colored-section">
+          <div
+            id="testimonial-carousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active container-fluid">
+                <div class="carousel-image">
+                  <img
+                    class="testimonial-image"
+                    src="images/hand2.png"
+                    alt="hand2"
+                  />
+                </div>
+                <div class="carousel-text">
+                  <em style="font-size: 50px">Pebbles, New York</em><br />
+                  <em style="font-size: 25px"
+                    >A finely developed chocolate donut</em
+                  ><br />
+                  <em style="font-size: 20px">Rs.120</em>
+                </div>
+              </div>
+              <div class="carousel-item container-fluid">
+                <div class="carousel-image">
+                  <img
+                    class="testimonial-image"
+                    src="images/hand2.png"
+                    alt="hand2"
+                  />
+                </div>
+                <div class="carousel-text">
+                  <em style="font-size: 50px">Pebbles, New York</em><br />
+                  <em style="font-size: 25px"
+                    >A finely developed chocolate donut</em
+                  ><br />
+                  <em style="font-size: 20px">Rs.120</em>
+                </div>
+              </div>
+              <div class="carousel-item container-fluid">
+                <div class="carousel-image">
+                  <img
+                    class="testimonial-image"
+                    src="images/hand2.png"
+                    alt="hand2"
+                  />
+                </div>
+                <div class="carousel-text">
+                  <em style="font-size: 50px">Pebbles, New York</em><br />
+                  <em style="font-size: 25px"
+                    >A finely developed chocolate donut</em
+                  ><br />
+                  <em style="font-size: 20px">Rs.120</em>
+                </div>
+              </div>
+              <div class="carousel-item container-fluid">
+                <div class="carousel-image">
+                  <img
+                    class="testimonial-image"
+                    src="images/hand2.png"
+                    alt="hand2"
+                  />
+                </div>
+                <div class="carousel-text">
+                  <em style="font-size: 50px">Pebbles, New York</em><br />
+                  <em style="font-size: 25px"
+                    >A finely developed chocolate donut</em
+                  ><br />
+                  <em style="font-size: 20px">Rs.120</em>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#testimonial-carousel"
+              role="button"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#testimonial-carousel"
+              role="button"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </a>
           </div>
-        </nav>
+        </section>
+      </div>
+    </div>
+
+    <!-- Main menu -->
+    <section id="Menu">
+      <div class="grid-container" id="container">
+        <div class="grid-item">
+          <div id="food-container">
+            <div id="food-items" class="d-food-items">
+              <div id="biryani" class="d-biryani">
+                <p id="category-name">Biryani</p>
+              </div>
+
+              <div id="chicken" class="d-chicken">
+                <p id="category-name">Chicken Delicious</p>
+              </div>
+
+              <div id="paneer" class="d-paneer">
+                <p id="category-name">Paneer Mania</p>
+              </div>
+
+              <div id="vegetable" class="d-vegetable">
+                <p id="category-name">Pure Veg Dishes</p>
+              </div>
+
+              <div id="chinese" class="d-chinese">
+                <p id="category-name">Chinese Corner</p>
+              </div>
+
+              <div id="south-indian" class="d-south-indian">
+                <p id="category-name">South Indian</p>
+              </div>
+            </div>
+
+            <!-- cart items -->
+            <div id="cart-page" class="cart-toggle">
+              <p id="cart-title">Cart Items</p>
+              <table>
+                <thead>
+                  <td>Item</td>
+                  <td>Name</td>
+                  <td>Quantity</td>
+                  <td>Price</td>
+                </thead>
+                <tbody id="table-body"></tbody>
+              </table>
+              <div id="btn-box">
+                <button class="cart-btn" onclick="cartToggle()">
+                  Go to Menu
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item">
+          <div id="cart">
+            <div id="category-list" style="padding-left: 20px">
+              <p class="item-menu">Go To</p>
+            </div>
+
+            <!-- cart total -->
+            <div id="checkout" class="cart-toggle">
+              <p id="total-item">Total Item : 5</p>
+              <p id="total-price"></p>
+              <p id="delievery">Free delievery on $ 40</p>
+              <button class="cart-btn">Checkout</button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Carousel -->
-    <div class="remaining">
-      <section class="colored-section">
-        <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active container-fluid">
-              <div class="carousel-image">
-                <img class="testimonial-image" src="images/hand2.png" alt="hand2">
-              </div>
-              <div class="carousel-text">
-                <em style="font-size : 50px;">Pebbles, New York</em><br>
-                <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
-                <em style="font-size : 20px;">Rs.120</em>
-              </div>
-            </div>
-            <div class="carousel-item container-fluid">
-              <div class="carousel-image">
-                <img class="testimonial-image" src="images/hand2.png" alt="hand2">
-              </div>
-              <div class="carousel-text">
-                <em style="font-size : 50px;">Pebbles, New York</em><br>
-                <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
-                <em style="font-size : 20px;">Rs.120</em>
-              </div>
-            </div>
-            <div class="carousel-item container-fluid">
-              <div class="carousel-image">
-                <img class="testimonial-image" src="images/hand2.png" alt="hand2">
-              </div>
-              <div class="carousel-text">
-                <em style="font-size : 50px;">Pebbles, New York</em><br>
-                <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
-                <em style="font-size : 20px;">Rs.120</em>
-              </div>
-            </div>
-            <div class="carousel-item container-fluid">
-              <div class="carousel-image">
-                <img class="testimonial-image" src="images/hand2.png" alt="hand2">
-              </div>
-              <div class="carousel-text">
-                <em style="font-size : 50px;">Pebbles, New York</em><br>
-                <em style="font-size : 25px;">A finely developed chocolate donut</em><br>
-                <em style="font-size : 20px;">Rs.120</em>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
-        </div>
-      </section>
-    </div>
-  </div>
-
-  <!-- Main menu -->
-  <section id="Menu">
-    <div class="grid-container" id="container">
-      <div class="grid-item">
-        <div id="food-container">
-          <div id="food-items" class="d-food-items">
-            <div id="biryani" class="d-biryani">
-              <p id="category-name">Biryani</p>
-            </div>
-
-            <div id="chicken" class="d-chicken">
-              <p id="category-name">Chicken Delicious</p>
-            </div>
-
-            <div id="paneer" class="d-paneer">
-              <p id="category-name">Paneer Mania</p>
-            </div>
-
-            <div id="vegetable" class="d-vegetable">
-              <p id="category-name">Pure Veg Dishes</p>
-            </div>
-
-            <div id="chinese" class="d-chinese">
-              <p id="category-name">Chinese Corner</p>
-            </div>
-
-            <div id="south-indian" class="d-south-indian">
-              <p id="category-name">South Indian</p>
-            </div>
-          </div>
-          
-          <!-- cart items -->
-          <div id="cart-page" class="cart-toggle">
-          <p id="cart-title">Cart Items</p>
-          <table>
-            <thead>
-              <td>Item</td>
-              <td>Name</td>
-              <td>Quantity</td>
-              <td>Price</td>
-            </thead>
-            <tbody id="table-body">
-    
-            </tbody>
-          </table>
-          <div id="btn-box">
-            <button class="cart-btn" onclick="cartToggle()">Go to Menu</button>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="grid-item">
-        <div id="cart">
-          <div id="category-list" style="padding-left: 20px;">
-            <p class="item-menu">Go To</p>
-          </div>
-
-          <!-- cart total -->
-          <div id="checkout" class="cart-toggle">
-          <p id="total-item">Total Item : 5</p>
-          <p id="total-price"></p>
-          <p id="delievery">Free delievery on $ 40</p>
-          <button class="cart-btn">Checkout</button>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <section id="About">
-    <footer id="footer">
-      <div class="footer-container-fluid">
+    <!-- Footer -->
+    <section id="About">
+      <footer id="footer">
+        <!-- <div class="footer-container-fluid">
         <div>
           <i class="social-icons fab fa-facebook-f"></i>
           <i class="social-icons fab fa-twitter"></i>
@@ -206,12 +275,132 @@
           <i class="social-icons fas fa-envelope"></i>
           <p>© Copyright 2022 CandyLand</p>
         </div>
-      </div>
-    </footer>
-  </section>
-  <script src="./index.js" type="module"></script>
-  <script src="./auth.js" type="module"></script>
-</body>
+      </div> -->
 
+        <!-- Remove the container if you want to extend the Footer to full width. -->
 
-</html> 
+        <footer
+          class="text-white text-center text-lg-start"
+          style="background-color: #863a6f"
+        >
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row mt-4">
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-12 mb-4 mb-md-0 aboutsec">
+                <h5 class="text-uppercase mb-4">About company</h5>
+
+                <p>
+                  We try to provide best services to our customers online and as
+                  well as offline.
+                </p>
+
+                <p>
+                  For any suggestions and feedbacks we are always ready to
+                  listen you.
+                </p>
+
+                <p>Our customers are our priority.</p>
+                <div class="mt-4">
+                  <!-- Facebook -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg"
+                    ><i class="social-icon fab fa-facebook-f"></i
+                  ></a>
+                  <!-- Dribbble -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg"
+                    ><i class="social-icon fab fa-dribbble"></i
+                  ></a>
+                  <!-- Twitter -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg"
+                    ><i class="social-icon fab fa-twitter"></i
+                  ></a>
+                  <!-- Google + -->
+                  <a type="button" class="btn btn-floating btn-warning btn-lg"
+                    ><i class="social-icon fab fa-google-plus-g"></i
+                  ></a>
+                  <!-- Linkedin -->
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4 pb-1">Kindly give a review :</h5>
+                
+                <div class="form-outline form-white mb-4">
+                  <input
+                    type="text"
+                    id=""
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="formControlLg"  style="margin-left: 0px;">Submit</label>
+                  
+                
+                </div>
+
+                <ul class="fa-ul" style="margin-left: 1.65em">
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-home"></i></span
+                    ><span class="ms-2">New York, NY 10201, US</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-envelope"></i></span
+                    ><span class="ms-2">candyland@gmail.com</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-phone"></i></span
+                    ><span class="ms-2">+ 01 253 463 22</span>
+                  </li>
+                  <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-print"></i></span
+                    ><span class="ms-2">+ 01 245 244 21</span>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4 mb-md-0 opening">
+                <h5 class="text-uppercase mb-4">Opening hours</h5>
+
+                <table class="table text-center text-white">
+                  <tbody class="font-weight-normal">
+                    <tr>
+                      <td>Mon - Thu:</td>
+                      <td>8am - 9pm</td>
+                    </tr>
+                    <tr>
+                      <td>Fri - Sat:</td>
+                      <td>8am - 1am</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday:</td>
+                      <td>9am - 10pm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
+
+          <!-- Copyright -->
+          <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+          >
+            <p>© Copyright 2022 CandyLand</p>
+          </div>
+          <!-- Copyright -->
+        </footer>
+
+        <!-- End of .container -->
+      </footer>
+    </section>
+    <script src="./index.js" type="module"></script>
+    <script src="./auth.js" type="module"></script>
+  </body>
+</html>

@@ -48,12 +48,12 @@ body {
 
 /*menu design */
 #food-container {
-    background-color: #eca69d;
+    background-color: #FFADBC;
     height: 100%;
 }
 
 #food-items {
-    background: #eca69d;
+    background: #ed96c6;
     overflow: auto;
     height: calc(100vh - 86px);
 }
@@ -80,7 +80,7 @@ body {
 }
 
 .menu {
-    background-color: #febdb3;
+    background-color: #FFADBC;
     margin: 0 0 0 0;
     overflow: hidden;
     padding: 0;
@@ -337,7 +337,7 @@ body {
 
 .navbar {
     /* padding:0 0 5.5rem ; */
-    background-color: #ff80aa;
+    background-color: #863A6F;
 }
 
 .navbar-brand {
@@ -380,7 +380,7 @@ body {
 /* sections */
 
 .colored-section {
-    background-color: #f8c5d7;
+    background-color: #FFADBC;
     color: #fff;
     height: 100%;
 }
@@ -428,8 +428,12 @@ body {
 
 /* footer-section */
 
-.social-icons {
+/* .social-icons {
     margin: 20px 10px;
+    cursor: pointer;
+}
+.social-icons:hover{
+    color: #f5c2cb;
 }
 
 @media (max-width :1168px) {
@@ -446,13 +450,30 @@ body {
 
 #footer {
     text-align: center;
-    background-color: #f6d0e5;
+    background-color: #975C8D;
+    
 }
 
 .footer-container-fluid {
     align-items: center;
     height: 150px;
-    background-color: #f6d0e5;
+    background-color: #863A6F;
     vertical-align: middle;
+    color : white;
     margin: auto;
+} */
+.aboutsec{
+    padding-left: 0px;
+    padding-right: 50px;
+}
+
+.opening{
+    padding-right: 0px;
+    padding-left: 50px;
+}
+
+#submitForm{
+    border-radius: 5px;
+    margin-top: 3px;
+    border-color: #863A6F;
 }
