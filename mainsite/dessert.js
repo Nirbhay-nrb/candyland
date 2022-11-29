@@ -127,7 +127,7 @@ const foodItem= [
     },
     {
         id : 15,
-        name : 'Choco Mocha Shake',
+        name : 'Choco Shake',
         category : 'Shakes',
         rating : 4.5,
         price : 30,
@@ -154,7 +154,7 @@ const foodItem= [
     },
     {
         id : 18,
-        name : 'Pack of 10 random chocolates',
+        name : 'Chocolates - 10',
         category : 'Sweets',
         rating : 4.9,
         price : 50,
@@ -172,7 +172,7 @@ const foodItem= [
     },
     {
         id : 20,
-        name : 'Pack of 5 CheeseCake',
+        name : 'CheeseCake',
         category : 'Sweets',
         rating : 4.5,
         price : 20,
@@ -208,7 +208,7 @@ const foodItem= [
     },
     {
         id : 24,
-        name : 'Macaron-Strawberry cake',
+        name : 'Strawberry cake',
         category : 'Cake',
         rating : 4.8,
         price : 119,
@@ -217,7 +217,7 @@ const foodItem= [
     },
     {
         id : 25,
-        name : 'Macaron-Butterscotch cake',
+        name : 'Butterscotch cake',
         category : 'Cake',
         rating : 4.3,
         price : 109,
